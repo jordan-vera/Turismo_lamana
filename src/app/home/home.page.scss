@@ -1,27 +1,81 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.fondo {
+  height: 100%;
+  background-image: radial-gradient(circle at 50% -20.71%, #ff7f85 0, #ff748c 8.33%, #ff6994 16.67%, #ff5d9c 25%, #ff52a4 33.33%, #ff47ad 41.67%, #f23cb5 50%, #e234be 58.33%, #cf32c8 66.67%, #b935d2 75%, #9f3bdb 83.33%, #7e42e5 91.67%, #514aed 100%);
 }
 
-#container strong {
+.contenedor-image {
+  background: rgba(252, 251, 251, 0.301);
+  margin-left: 11%;
+  margin-right: 11%;
+}
+
+.container-button {
+  margin-left: 11%;
+  margin-right: 11%;
+  margin-top: 50px;
+}
+
+.container-button button{
+  width: 100%;
+  height: 45px;
+  background-color: rgba(255, 0, 0, 0.719);
+  color: white;
   font-size: 20px;
-  line-height: 26px;
+  font-family: 'Patrick Hand', cursive;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.cc1{
+  position: relative;
+  animation-name: animacion1;
+  animation-duration: 4s;
 }
 
-#container a {
-  text-decoration: none;
+.cc2{
+  position: relative;
+  animation-name: animacion2;
+  animation-duration: 4s;
+}
+
+.cc3{
+  position: relative;
+  animation-name: animacion3;
+  animation-duration: 4s;
+}
+
+.cc4{
+  position: relative;
+  animation-name: animacion4;
+  animation-duration: 4s;
+}
+
+@keyframes animacion1 {
+  0%   {left:0px; top:0px;}
+  25%  {left:180px; top:0px;}
+  50%  {left:180px; top:180px;}
+  75%  {left:0px; top:180px;}
+  100% {left:0px; top:0px;}
+}
+
+@keyframes animacion2 {
+  0%   {left:0px; top:0px;}
+  25%  {left:0px; top:180px;}
+  50%  {left:-180px; top:180px;}
+  75%  {left:-180px; top:0px;}
+  100% {left:0px; top:0px;}
+}
+
+@keyframes animacion3 {
+  0%   {left:0px; top:0px;}
+  25%  {left:-180px; top:0px;}
+  50%  {left:-180px; top:-180px;}
+  75%  {left:0px; top:-180px;}
+  100% {left:0px; top:0px;}
+}
+
+@keyframes animacion4 {
+  0%   {left:0px; top:0px;}
+  25%  {left:-0px; top:-180px;}
+  50%  {left:180px; top:-180px;}
+  75%  {left:180px; top:0px;}
+  100% {left:0px; top:0px;}
 }

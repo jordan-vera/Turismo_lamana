@@ -1,0 +1,25 @@
+.barra {
+    color: white;
+    --background: radial-gradient(circle at 50% -20.71%, #ff7f85 0, #ff748c 8.33%, #ff6994 16.67%, #ff5d9c 25%, #ff52a4 33.33%, #ff47ad 41.67%, #f23cb5 50%, #e234be 58.33%, #cf32c8 66.67%, #b935d2 75%, #9f3bdb 83.33%, #7e42e5 91.67%, #514aed 100%);
+}
+
+#map {
+    width: 100%;
+    height: 250px;
+    margin: 0px;
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+    display: block;
+    &.show-map {
+      opacity: 1;
+    }
+  }
+
+.image-galeria {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.titulo-image {
+  margin-bottom: 0px;
+}

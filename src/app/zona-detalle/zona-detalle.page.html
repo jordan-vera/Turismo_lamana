@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar class="barra">
+    <ion-title class="font-all">
+      <i class="fas fa-arrow-left" style="margin-right: 10px;" (click)="irAtras()"></i> Detalle de lugar turístico
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="font-all">
+
+  <div class="container">
+    <h4><b>{{zonas[idzona].nombre}}</b></h4>
+
+    <p class="text-justify">
+      {{zonas[idzona].descripcion}}
+    </p>
+
+    <h5><b>¿Como llegar?</b></h5>
+
+    <p>
+      {{ubicaciones[idzona].como_llegar}}
+    </p>
+
+    <div #mapaenvio id="map"></div>
+
+    <br>
+
+    <h5><b>Días y horas de atención</b></h5>
+    <p>De lunes a domingo</p>
+    <p>De 7:00am a 18:pm</p>
+
+    <h5><b>Gatronomía</b></h5>
+    <ul>
+      <li *ngFor="let x of filterItemsOfType(idzona+1)">
+        {{x.nombre}}
+      </li>
+    </ul>
+
+    <h5><b>Imagenes</b></h5>
+
+    <div *ngFor="let x of filterItemsOfId(idzona+1)">
+      <img class="image-galeria" [src]="x.nombre">
+    </div>
+
+    
+  </div>
+
+
+</ion-content>

@@ -1,20 +1,47 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="fondo">
+  <div class="fondo">
+    <br>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="text-center">
+      <h1 class="text-white font-all mb-3">
+        <b>Zonas Turísticas de La Maná</b>
+      </h1>
+      <div class="contenedor-image rounded">
+        <img src="../../assets/imagenes/logoslamana.png" alt="" srcset="">
+      </div>
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <br>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-5 cc1">
+          <img src="../../assets/imagenes/parque.jpg" class="rounded-circle" alt="" srcset="">
+        </div>
+        <div class="col-5 cc2">
+          <img src="../../assets/imagenes/Cascad.jpg" class="rounded-circle" alt="" srcset="">
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-5 cc4">
+          <img src="../../assets/imagenes/picsinas.jpg" class="rounded-circle" alt="" srcset="">
+        </div>
+        <div class="col-5 cc3">
+          <img src="../../assets/imagenes/hosteria.jpg" class="rounded-circle" alt="" srcset="">
+        </div>
+      </div>
+    </div>
+
+    <div class="container-button">
+      <button class="rounded" [routerLink]="['/zonas']">Siguiente</button>
+    </div>
+
+
   </div>
+
 </ion-content>

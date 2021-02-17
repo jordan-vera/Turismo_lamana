@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'zonas',
+    loadChildren: () => import('./zonas/zonas.module').then( m => m.ZonasPageModule)
+  },
+  {
+    path: 'zona-detalle/:idzona',
+    loadChildren: () => import('./zona-detalle/zona-detalle.module').then( m => m.ZonaDetallePageModule)
+  },
+  {
+    path: 'mapa',
+    loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
+  },
 ];
 
 @NgModule({

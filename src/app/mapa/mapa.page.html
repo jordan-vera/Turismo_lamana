@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>mapa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <google-map height="370px" width="550px" [center]="center" [zoom]="zoom" (mapClick)="addMarker($event)"
+    (mapMousemove)="move($event)" (mapRightclick)="removeLastMarker()">
+    <map-marker #marker *ngFor="let markerPosition of markerPositions" [position]="markerPosition"
+      [options]="markerOptions">
+    </map-marker>
+    <map-info-window>Mi ubicación</map-info-window>
+  </google-map>
+</ion-content>

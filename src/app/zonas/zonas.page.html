@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar class="barra">
+    <ion-searchbar showCancelButton="never" placeholder="Buscar" name="busquedatxt" [(ngModel)]="buscadortxt" style="margin-left: 15px;">
+    </ion-searchbar>
+
+    <ion-buttons slot="end" (click)="salir()">
+      <ion-icon name="log-out-outline" slot="end" class="ico-logout"></ion-icon>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content fullscreen>
+
+  <ion-list>
+    <ion-list-header>
+      <i class="fas fa-map-marked-alt" style="margin-right: 10px;"></i>  Lugares turísticos de La Maná
+    </ion-list-header>
+
+    <ion-item *ngFor="let x of zonas |filter:buscadortxt" [routerLink]="['/zona-detalle', x.idzonas]">
+      <ion-avatar slot="start">
+        <img [src]="getImagen(x.idzonas)">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{x.nombre}}</h2>
+        <p>{{x.descripcion}}</p>
+      </ion-label>
+    </ion-item>
+
+   
+  </ion-list>
+
+</ion-content>
